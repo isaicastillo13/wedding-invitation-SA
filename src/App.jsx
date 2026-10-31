@@ -63,20 +63,9 @@ function App() {
           className="flex w-full max-w-[680px] flex-col items-center text-center"
           data-state={envelopeState}
         >
-          <p className="m-0 text-[0.72rem] leading-[1.5] font-semibold tracking-[0.2em] text-wedding-label uppercase">
-            Una fecha para recordar
-          </p>
-          <h1
-            className={`my-[6px] text-[clamp(2.4rem,7vw,4rem)] leading-[1.1] font-normal tracking-[-0.045em] text-wedding-heading [text-shadow:0_1px_16px_var(--color-wedding-glow-soft)] transition-opacity duration-[350ms] ${isOpening ? 'opacity-0' : ''}`}
-            id="page-title"
-          >
-            ¡Nos casamos!
-          </h1>
-          <p
-            className={`mb-[clamp(20px,3vh,30px)] max-w-[34ch] text-[clamp(0.95rem,2.4vw,1.08rem)] leading-[1.5] text-wedding-copy [text-shadow:0_1px_12px_var(--color-wedding-glow-medium)] transition-opacity duration-[350ms] ${isOpening ? 'opacity-0' : ''}`}
-          >
-            Con mucha ilusión queremos compartir este día contigo.
-          </p>
+   
+  
+
 
           <div className="relative aspect-[1559/1009] w-[min(86vw,560px)] [perspective:1300px] max-[480px]:w-[min(91vw,560px)]">
             <div
