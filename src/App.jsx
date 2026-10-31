@@ -1,8 +1,9 @@
-import { useState } from 'react'
-import backgroundImage from './assets/Img/fondo.png'
+import { useRef, useState } from 'react'
+import backgroundImage from './assets/Img/fondo_2.png'
 import envelopeBody from './assets/Img/Sobre_2.png'
 import envelopeFlap from './assets/Img/Sobre_3.png'
 import waxSeal from './assets/Img/Sobre_4.png'
+import backgroundMusic from './assets/cancionFondo.mp3'
 import InvitationHero from './components/InvitationHero.jsx'
 import LoveMessageSection from './components/LoveMessageSection.jsx'
 import PhotoSection1 from './components/Photo_Section1.jsx'
@@ -15,9 +16,17 @@ import './App.css'
 
 function App() {
   const [envelopeState, setEnvelopeState] = useState('closed')
+  const musicRef = useRef(null)
 
   const openEnvelope = () => {
     if (envelopeState !== 'closed') return
+
+    const music = musicRef.current
+    if (music) {
+      void music.play().catch((error) => {
+        console.error('No se pudo reproducir la música de la invitación.', error)
+      })
+    }
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       setEnvelopeState('open')
@@ -42,6 +51,7 @@ function App() {
 
   return (
     <main className="relative min-h-svh">
+      <audio ref={musicRef} src={backgroundMusic} loop preload="auto" />
       <section
         className="relative isolate grid min-h-svh place-items-center overflow-visible bg-wedding-paper bg-cover bg-center px-5 py-[clamp(28px,6vh,68px)] text-wedding-ink"
         style={{
