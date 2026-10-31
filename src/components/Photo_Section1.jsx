@@ -1,4 +1,4 @@
-import hotelIllustration from "../assets/Img/hotel.PNG";
+import hotelIllustration from "../assets/Img/hotel.png";
 import couplePhoto from "../assets/Img/IMG_5.JPG.jpeg";
 import fondo from "../assets/Img/fondo_1.png";
 
