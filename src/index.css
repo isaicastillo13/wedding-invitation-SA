@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-wedding-body: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --color-wedding-paper: #e7d3b5;
+  --color-wedding-ink: #60443c;
+  --color-wedding-label: #7d5450;
+  --color-wedding-heading: #553b36;
+  --color-wedding-copy: #624943;
+  --color-wedding-card-ink: #59413a;
+  --color-wedding-accent: #954d57;
+  --color-wedding-focus: #783744;
+  --color-wedding-hint: #694c44;
+  --color-wedding-card-border: rgba(151, 117, 88, 0.28);
+  --color-wedding-card-top: rgba(255, 255, 248, 0.98);
+  --color-wedding-card-bottom: rgba(248, 240, 222, 0.98);
+  --color-wedding-card-shadow: rgba(80, 52, 33, 0.16);
+  --color-wedding-glow-soft: rgba(255, 250, 239, 0.7);
+  --color-wedding-glow-medium: rgba(255, 250, 239, 0.8);
+  --color-wedding-glow-strong: rgba(255, 250, 239, 0.9);
+  --color-wedding-page-overlay-soft: rgba(67, 44, 31, 0.1);
+  --color-wedding-page-overlay: rgba(67, 44, 31, 0.12);
+  --color-wedding-flap-highlight: rgba(255, 255, 255, 0.85);
+  --color-wedding-flap-top: #f8f2e7;
+  --color-wedding-flap-bottom: #e8ddca;
+  --color-wedding-flap-shadow: rgba(110, 82, 59, 0.16);
+  --color-wedding-hero-background: #4a332d;
+  --color-wedding-white: #fffaf3;
+  --color-wedding-hero-shadow: rgba(28, 17, 15, 0.22);
+  --color-wedding-hero-overlay-strong: rgba(28, 17, 15, 0.48);
+  --color-wedding-hero-overlay-medium: rgba(28, 17, 15, 0.42);
+  --color-wedding-hero-overlay: rgba(28, 17, 15, 0.3);
+  --color-wedding-hero-overlay-soft: rgba(28, 17, 15, 0.28);
+  --color-wedding-hero-overlay-light: rgba(28, 17, 15, 0.12);
+  --color-wedding-hero-overlay-faint: rgba(28, 17, 15, 0.04);
+  --color-wedding-separator-wine: #420101;
+  --color-wedding-photo-edge: #202c37;
+}
+
+@layer base {
+  html {
+    min-width: 320px;
+    min-height: 100%;
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Pinyon Script", cursive;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+}
