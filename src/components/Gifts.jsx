@@ -16,7 +16,7 @@ function Gifts() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 flex w-full max-w-[1000px] translate-y-[5vh] flex-col items-center gap-8 text-center">
+      <div className="relative z-10 flex w-full max-w-250 flex-col items-center gap-8 text-center">
         <h2
           className="m-0 leading-[1.1] font-normal text-wedding-separator-wine"
           id="dress-code-title"
@@ -24,10 +24,18 @@ function Gifts() {
           Muestra de Cariño
         </h2>
         <div className="font-wedding-body leading-[1.45]">
-          <p className="m-0">lluvia de sobres</p>
-          <p className="m-0">Yappy: <br />6676-6109</p>
+          <p className="m-0">Lluvia de sobres</p>
+          <p className="m-0">
+            <span className="font-bold">Yappy:</span> <br />
+            6676-6109
+          </p>
           <p className="mb-8">
-            ACH: <br /> Samuel y Arantxa <br />04-01-98-356275-3
+            <span className="font-bold">ACH:</span> <br /> Samuel y Arantxa{" "}
+            <br />
+            Banco general <br />
+            Cuenta de ahorros
+            <br />
+            04-01-98-356275-3
           </p>
         </div>
       </div>

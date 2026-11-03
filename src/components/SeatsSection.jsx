@@ -1,5 +1,5 @@
-import couplePhoto from '../assets/Img/IMG_4.JPG.jpeg'
-import marco from '../assets/Img/marco.png'
+import couplePhoto from "../assets/Img/IMG_4.JPG.jpeg";
+import marco from "../assets/Img/marco.png";
 
 function SeatsSection({ invitation }) {
   return (
@@ -16,10 +16,7 @@ function SeatsSection({ invitation }) {
       />
 
       <div className="grid grid-rows-[auto_1fr_auto] justify-items-center bg-wedding-separator-wine px-5 py-[clamp(1.5rem,4vh,3rem)] text-wedding-white">
-        <h2
-          className="m-0 leading-tight font-medium"
-          id="seats-title"
-        >
+        <h2 className="m-0 leading-tight font-medium" id="seats-title">
           Para ti
         </h2>
 
@@ -33,10 +30,10 @@ function SeatsSection({ invitation }) {
           />
           <div className="relative flex flex-col items-center text-center">
             <span className="font-wedding-script leading-none text-3xl">
-              {invitation?.puestosAsignados ?? '—'}
+              {invitation?.puestosAsignados ?? "—"}
             </span>
             <p className="mt-2 mb-0 font-wedding-body leading-none">
-              Puesto
+              Puesto{invitation?.puestosAsignados > 1 ? "s" : ""}
             </p>
           </div>
         </div>
@@ -48,7 +45,7 @@ function SeatsSection({ invitation }) {
         </p>
       </div>
     </section>
-  )
+  );
 }
 
-export default SeatsSection
+export default SeatsSection;

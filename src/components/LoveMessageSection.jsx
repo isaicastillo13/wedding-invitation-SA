@@ -18,7 +18,7 @@ function LoveMessageSection() {
             className="m-0 max-w-[32ch] text-[clamp(1rem,4vw,2rem)] leading-[1.15] font-semibold tracking-[0.1em] font-wedding-body"
             id="love-message-title"
           >
-            Una sola vida no basta, para decirte cuanto te amo
+            Una sola vida no basta, para decirte cuanto te amo.
           </h2>
           <p className="m-0 text-[clamp(0.75rem,2.6vw,1.2rem)] leading-[1.4] font-wedding-body font-medium tracking-[0.12em]">
             Con amor, queremos compartir este día tan especial y celebrar juntos

@@ -17,7 +17,7 @@ function PhotoSection1() {
         />
       </div>
 
-      <div className="relative isolate grid min-h-0 grid-rows-[38%_62%] items-center bg-wedding-paper text-wedding-separator-wine">
+      <div className="relative isolate flex min-h-0 flex-col items-center justify-center gap-[clamp(0.5rem,2svh,1rem)] bg-wedding-paper px-4 py-4 text-wedding-separator-wine">
         <div
           className="absolute inset-0 bg-center bg-cover opacity-80"
           style={{ backgroundImage: `url(${fondo})` }}
@@ -27,14 +27,16 @@ function PhotoSection1() {
           className="absolute inset-0 bg-wedding-paper/70"
           aria-hidden="true"
         />
-        <img
-          className="relative z-10 mx-auto h-full max-w-[42vw] object-contain mix-blend-multiply mt-25"
-          src={hotelIllustration}
-          alt=""
-          draggable="false"
-        />
+        <div className="relative z-10 flex w-full justify-center">
+          <img
+            className="h-[clamp(6.5rem,18svh,11rem)] max-w-[42vw] object-contain mix-blend-multiply"
+            src={hotelIllustration}
+            alt=""
+            draggable="false"
+          />
+        </div>
 
-        <div className="relative z-10 flex min-h-0 flex-col items-center justify-center px-4 text-center text-[clamp(1rem,3.4vw,1.75rem)] font-wedding-body leading-[1.35] tracking-[0.06em] font-bold uppercase">
+        <div className="relative z-10 flex min-h-0 flex-col items-center text-center text-[clamp(1rem,3.4vw,1.75rem)] font-wedding-body leading-[1.35] tracking-[0.06em] font-bold uppercase">
           <h2 className="sr-only" id="celebration-details-title">
             Detalles de la celebración
           </h2>
@@ -46,9 +48,9 @@ function PhotoSection1() {
           <p className="mt-[clamp(0.65rem,2vh,1.25rem)] mb-0 max-w-[70ch]">
             Lugar: Hotel Hyatt Regency Panamá
             <br />
-            Piso M - Mezanine (Ceremonia / Terraza)
+            CEREMONIA: Terraza / Piso M 
             <br />
-            Piso RT - Torre 2 (Recepción)
+            RECEPCIÓN: Torre 2 / Piso RT
           </p>
         </div>
       </div>
