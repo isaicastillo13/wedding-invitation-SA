@@ -1,7 +1,7 @@
 import couplePhoto from '../assets/Img/IMG_4.JPG.jpeg'
 import marco from '../assets/Img/marco.png'
 
-function SeatsSection() {
+function SeatsSection({ invitation }) {
   return (
     <section
       className="grid min-h-svh grid-rows-[minmax(19rem,45svh)_minmax(32rem,1fr)] overflow-hidden md:h-svh md:min-h-[680px] md:grid-cols-[0.95fr_1.05fr] md:grid-rows-1"
@@ -33,7 +33,7 @@ function SeatsSection() {
           />
           <div className="relative flex flex-col items-center text-center">
             <span className="font-wedding-script leading-none text-3xl">
-              4
+              {invitation?.puestosAsignados ?? '—'}
             </span>
             <p className="mt-2 mb-0 font-wedding-body leading-none">
               Puesto

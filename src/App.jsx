@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import backgroundImage from './assets/Img/fondo_2.png'
 import envelopeBody from './assets/Img/Sobre_2.png'
 import envelopeFlap from './assets/Img/Sobre_3.png'
@@ -11,12 +11,41 @@ import DressCode from './components/DressCode.jsx'
 import SeatsSection from './components/SeatsSection.jsx'
 import Gift from './components/Gifts.jsx'
 import PhotoSection2 from './components/Photo_Section2.jsx'
-
 import './App.css'
+import ConfirmAttendance from './components/ConfirmAttendance.jsx'
+import { consultarInvitacion } from './services/invitacionesApi'
+
+const invitationToken = new URLSearchParams(window.location.search).get('token')
 
 function App() {
   const [envelopeState, setEnvelopeState] = useState('closed')
+  const [guestInvitation, setGuestInvitation] = useState(null)
+  const [invitationLoadState, setInvitationLoadState] = useState(
+    invitationToken ? 'loading' : 'missing',
+  )
+  const [invitationLoadError, setInvitationLoadError] = useState('')
   const musicRef = useRef(null)
+
+  useEffect(() => {
+    if (!invitationToken) return
+
+    let isCurrent = true
+    consultarInvitacion(invitationToken)
+      .then((invitation) => {
+        if (!isCurrent) return
+        setGuestInvitation(invitation)
+        setInvitationLoadState('loaded')
+      })
+      .catch((error) => {
+        if (!isCurrent) return
+        setInvitationLoadError(error.message)
+        setInvitationLoadState('error')
+      })
+
+    return () => {
+      isCurrent = false
+    }
+  }, [])
 
   const openEnvelope = () => {
     if (envelopeState !== 'closed') return
@@ -145,7 +174,18 @@ function App() {
       {envelopeState === 'open' && <LoveMessageSection />}
       {envelopeState === 'open' && <PhotoSection1 />}
       {envelopeState === 'open' && <DressCode />}
-      {envelopeState === 'open' && <SeatsSection />}
+      {envelopeState === 'open' && (
+        <SeatsSection invitation={guestInvitation} />
+      )}
+      {envelopeState === 'open' && (
+        <ConfirmAttendance
+          token={invitationToken}
+          invitation={guestInvitation}
+          loadState={invitationLoadState}
+          loadError={invitationLoadError}
+          onInvitationUpdated={setGuestInvitation}
+        />
+      )}
       {envelopeState === 'open' && <Gift />}
       {envelopeState === 'open' && <PhotoSection2 />}
     </main>
