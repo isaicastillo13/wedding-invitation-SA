@@ -31,7 +31,7 @@ function DressCode() {
           </p>
         </header>
 
-        <div className="relative z-10 mx-auto grid w-full max-w-[1180px] grid-cols-[1fr_minmax(180px,0.85fr)_1fr] items-center gap-x-[clamp(0.75rem,3vw,2.5rem)] px-[clamp(1rem,3vw,3rem)] max-[640px]:grid-cols-2 max-[640px]:grid-rows-[auto_auto] max-[640px]:gap-x-3 max-[640px]:gap-y-0 max-[640px]:px-4">
+        <div className="relative z-10 mx-auto grid w-full max-w-295 grid-cols-[1fr_minmax(180px,0.85fr)_1fr] items-center gap-x-[clamp(0.75rem,3vw,2.5rem)] px-[clamp(1rem,3vw,3rem)] max-[640px]:grid-cols-2 max-[640px]:grid-rows-[auto_auto] max-[640px]:gap-x-3 max-[640px]:gap-y-0 max-[640px]:px-4">
           <div className="text-center max-[640px]:row-start-2">
             <p className="m-0 leading-tight font-medium text-2xl">
               Hombres
@@ -44,7 +44,7 @@ function DressCode() {
           </div>
 
           <img
-            className="mx-auto max-h-[44svh] w-full max-w-[300px] object-contain mix-blend-multiply max-[640px]:col-span-2 max-[640px]:row-start-1 max-[640px]:h-[38svh] max-[640px]:w-auto max-[640px]:max-h-[320px] max-[640px]:max-w-[52vw]"
+            className="mx-auto max-h-[44svh] w-full max-w-75 object-contain mix-blend-multiply max-[640px]:col-span-2 max-[640px]:row-start-1 max-[640px]:h-[38svh] max-[640px]:w-auto max-[640px]:max-h-80 max-[640px]:max-w-[52vw]"
             src={DressCodeIllustration}
             alt=""
             draggable="false"
