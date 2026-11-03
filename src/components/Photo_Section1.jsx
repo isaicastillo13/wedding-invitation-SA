@@ -34,7 +34,7 @@ function PhotoSection1() {
           draggable="false"
         />
 
-        <div className="relative z-10 flex min-h-0 flex-col items-center justify-center px-4 text-center font-wedding-body leading-[1.45] tracking-[0.1em] uppercase font-bold">
+        <div className="relative z-10 flex min-h-0 flex-col items-center justify-center px-4 text-center text-[clamp(1rem,3.4vw,1.75rem)] font-wedding-body leading-[1.35] tracking-[0.06em] font-bold uppercase">
           <h2 className="sr-only" id="celebration-details-title">
             Detalles de la celebración
           </h2>

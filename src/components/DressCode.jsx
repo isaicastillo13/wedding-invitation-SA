@@ -33,9 +33,9 @@ function DressCode() {
 
         <div className="relative z-10 mx-auto grid w-full max-w-[1180px] grid-cols-[1fr_minmax(180px,0.85fr)_1fr] items-center gap-x-[clamp(0.75rem,3vw,2.5rem)] px-[clamp(1rem,3vw,3rem)] max-[640px]:grid-cols-2 max-[640px]:grid-rows-[auto_auto] max-[640px]:gap-x-3 max-[640px]:gap-y-0 max-[640px]:px-4">
           <div className="text-center max-[640px]:row-start-2">
-            <h2 className="m-0 leading-tight font-medium">
+            <p className="m-0 leading-tight font-medium text-2xl">
               Hombres
-            </h2>
+            </p>
             <p className="mt-3 mb-0 font-wedding-body leading-[1.4] ">
               Traje y corbata
               <br />
@@ -51,9 +51,9 @@ function DressCode() {
           />
 
           <div className="max-[640px]:row-start-2 text-center">
-            <h2 className="m-0 leading-tight font-medium">
+            <p className="m-0 leading-tight font-medium text-2xl">
               Mujeres
-            </h2>
+            </p>
             <p className="mt-3 mb-0 font-wedding-body leading-[1.4]">
               Vestido largo
               <br />

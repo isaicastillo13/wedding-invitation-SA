@@ -32,8 +32,8 @@ function SeatsSection() {
             aria-hidden="true"
           />
           <div className="relative flex flex-col items-center text-center">
-            <span className="font-wedding-script leading-none">
-              1
+            <span className="font-wedding-script leading-none text-3xl">
+              4
             </span>
             <p className="mt-2 mb-0 font-wedding-body leading-none">
               Puesto
