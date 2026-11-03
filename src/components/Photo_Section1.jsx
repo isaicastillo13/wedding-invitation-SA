@@ -5,7 +5,7 @@ import fondo from "../assets/Img/fondo_1.png";
 function PhotoSection1() {
   return (
     <section
-      className="grid h-svh min-h-[640px] grid-rows-[1fr_1fr] overflow-hidden"
+      className="grid h-svh min-h-160 grid-rows-[1fr_1fr] overflow-hidden"
       aria-labelledby="celebration-details-title"
     >
       <div className="relative min-h-0 overflow-hidden bg-wedding-hero-background">
@@ -28,7 +28,7 @@ function PhotoSection1() {
           aria-hidden="true"
         />
         <img
-          className="relative z-10 mx-auto h-full max-w-[42vw] object-contain mix-blend-multiply mt-[100px]"
+          className="relative z-10 mx-auto h-full max-w-[42vw] object-contain mix-blend-multiply mt-25"
           src={hotelIllustration}
           alt=""
           draggable="false"
