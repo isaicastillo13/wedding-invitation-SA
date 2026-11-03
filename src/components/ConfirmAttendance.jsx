@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { guardarRespuestas } from '../services/invitacionesApi'
+import { useState } from "react";
+import { guardarRespuestas } from "../services/invitacionesApi";
 
 function ConfirmAttendance({
   token,
@@ -8,10 +8,10 @@ function ConfirmAttendance({
   loadError,
   onInvitationUpdated,
 }) {
-  const [responses, setResponses] = useState({})
-  const [isSaving, setIsSaving] = useState(false)
-  const [saveError, setSaveError] = useState('')
-  const [isSaved, setIsSaved] = useState(false)
+  const [responses, setResponses] = useState({});
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveError, setSaveError] = useState("");
+  const [isSaved, setIsSaved] = useState(false);
 
   const selectedResponses =
     invitation?.invitados
@@ -19,30 +19,31 @@ function ConfirmAttendance({
         invitadoId,
         confirmacion: responses[invitadoId] ?? confirmacion,
       }))
-      .filter(({ confirmacion }) => confirmacion === 'Sí' || confirmacion === 'No') ??
-    []
+      .filter(
+        ({ confirmacion }) => confirmacion === "Sí" || confirmacion === "No",
+      ) ?? [];
 
   const updateResponse = (invitadoId, confirmacion, checked) => {
     setResponses((current) => ({
       ...current,
-      [invitadoId]: checked ? confirmacion : 'Pendiente',
-    }))
-    setSaveError('')
-    setIsSaved(false)
-  }
+      [invitadoId]: checked ? confirmacion : "Pendiente",
+    }));
+    setSaveError("");
+    setIsSaved(false);
+  };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    if (!selectedResponses.length || isSaving) return
+    event.preventDefault();
+    if (!selectedResponses.length || isSaving) return;
 
-    setIsSaving(true)
-    setSaveError('')
-    setIsSaved(false)
+    setIsSaving(true);
+    setSaveError("");
+    setIsSaved(false);
     try {
       const updatedInvitation = await guardarRespuestas(
         token,
         selectedResponses,
-      )
+      );
       setResponses(
         Object.fromEntries(
           updatedInvitation.invitados.map(({ invitadoId, confirmacion }) => [
@@ -50,22 +51,22 @@ function ConfirmAttendance({
             confirmacion,
           ]),
         ),
-      )
-      onInvitationUpdated(updatedInvitation)
-      setIsSaved(true)
+      );
+      onInvitationUpdated(updatedInvitation);
+      setIsSaved(true);
     } catch (error) {
-      setSaveError(error.message)
+      setSaveError(error.message);
     } finally {
-      setIsSaving(false)
+      setIsSaving(false);
     }
-  }
+  };
 
   return (
     <section
       className="bg-wedding-separator-wine px-5 py-[clamp(2.5rem,7vh,5rem)] text-wedding-white"
       aria-labelledby="confirm-attendance-title"
     >
-      <div className="mx-auto w-full max-w-[680px]">
+      <div className="mx-auto w-full max-w-170">
         <h2
           className="m-0 text-center font-wedding-body text-[clamp(1.75rem,4vw,2.25rem)] leading-tight font-semibold"
           id="confirm-attendance-title"
@@ -73,31 +74,31 @@ function ConfirmAttendance({
           Confirma tu asistencia
         </h2>
 
-        {loadState === 'loading' && (
+        {loadState === "loading" && (
           <p className="mt-6 mb-0 text-center" role="status">
             Cargando los datos de tu invitación…
           </p>
         )}
-        {loadState === 'missing' && (
+        {loadState === "missing" && (
           <p className="mt-6 mb-0 text-center" role="status">
             Para consultar tus puestos y confirmar asistencia, abre el enlace
             personalizado de tu invitación.
           </p>
         )}
-        {loadState === 'error' && (
+        {loadState === "error" && (
           <p className="mt-6 mb-0 text-center" role="alert">
             {loadError}
           </p>
         )}
 
-        {loadState === 'loaded' && invitation && (
+        {loadState === "loaded" && invitation && (
           <>
             {invitation.puestosSinNombre > 0 && (
               <p className="mt-6 mb-0 text-center text-sm text-wedding-white/80">
-                Hay {invitation.puestosSinNombre}{' '}
+                Hay {invitation.puestosSinNombre}{" "}
                 {invitation.puestosSinNombre === 1
-                  ? 'puesto pendiente'
-                  : 'puestos pendientes'}{' '}
+                  ? "puesto pendiente"
+                  : "puestos pendientes"}{" "}
                 de completar con un nombre; no es posible responder por esos
                 puestos.
               </p>
@@ -127,17 +128,17 @@ function ConfirmAttendance({
                         </legend>
                         <label className="inline-flex cursor-pointer items-center gap-2">
                           <input
-                            className="size-4 accent-[var(--color-wedding-paper)]"
+                            className="size-4 accent-wedding-paper"
                             type="checkbox"
                             value="Sí"
                             checked={
                               (responses[guest.invitadoId] ??
-                                guest.confirmacion) === 'Sí'
+                                guest.confirmacion) === "Sí"
                             }
                             onChange={(event) =>
                               updateResponse(
                                 guest.invitadoId,
-                                'Sí',
+                                "Sí",
                                 event.target.checked,
                               )
                             }
@@ -146,17 +147,17 @@ function ConfirmAttendance({
                         </label>
                         <label className="inline-flex cursor-pointer items-center gap-2">
                           <input
-                            className="size-4 accent-[var(--color-wedding-paper)]"
+                            className="size-4 accent-wedding-paper"
                             type="checkbox"
                             value="No"
                             checked={
                               (responses[guest.invitadoId] ??
-                                guest.confirmacion) === 'No'
+                                guest.confirmacion) === "No"
                             }
                             onChange={(event) =>
                               updateResponse(
                                 guest.invitadoId,
-                                'No',
+                                "No",
                                 event.target.checked,
                               )
                             }
@@ -180,11 +181,11 @@ function ConfirmAttendance({
                 )}
 
                 <button
-                  className="mx-auto mt-6 block rounded border border-wedding-white bg-transparent px-6 py-3 font-wedding-body font-semibold text-wedding-white transition-colors duration-200 hover:bg-wedding-white hover:text-wedding-separator-wine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-wedding-white disabled:cursor-not-allowed disabled:opacity-50"
+                  className="mx-auto mt-6 block rounded border border-wedding-white bg-transparent px-6 py-3 font-wedding-body font-semibold text-wedding-white transition-colors duration-200 hover:bg-wedding-white hover:text-wedding-separator-wine focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-wedding-white disabled:cursor-not-allowed disabled:opacity-50"
                   type="submit"
                   disabled={isSaving || selectedResponses.length === 0}
                 >
-                  {isSaving ? 'Guardando…' : 'Guardar respuestas'}
+                  {isSaving ? "Guardando…" : "Guardar respuestas"}
                 </button>
               </form>
             )}
@@ -192,7 +193,7 @@ function ConfirmAttendance({
         )}
       </div>
     </section>
-  )
+  );
 }
 
-export default ConfirmAttendance
+export default ConfirmAttendance;
