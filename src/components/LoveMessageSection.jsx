@@ -15,12 +15,12 @@ function LoveMessageSection() {
         />
         <div className="absolute top-[19%] right-[20%] bottom-[18%] left-[20%] flex flex-col items-center justify-center text-center">
           <h2
-            className="m-0 max-w-[32ch] font-wedding-body text-[clamp(0.82rem,2.25vw,1.55rem)] leading-[1.35] font-semibold tracking-[0.12em] uppercase"
+            className="m-0 max-w-[32ch] leading-[1.35] font-semibold tracking-[0.12em] uppercase"
             id="love-message-title"
           >
             Una sola vida no basta, para decirte cuanto te amo
           </h2>
-          <p className="mt-[clamp(1rem,4vw,2.5rem)] mb-0 font-wedding-body text-[clamp(0.62rem,1.65vw,1.12rem)] leading-[1.6] font-medium tracking-[0.15em] uppercase">
+          <p className="mt-[clamp(1rem,4vw,2.5rem)] mb-0 font-wedding-body leading-[1.6] font-medium tracking-[0.15em] uppercase">
             Con amor, queremos compartir este día tan especial y celebrar juntos
             el comienzo de nuestra historia para siempre.
           </p>

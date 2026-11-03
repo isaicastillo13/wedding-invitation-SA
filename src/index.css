@@ -1,7 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Burgues Script";
+  src: url("./assets/Burgues Script W00 Regular/Burgues Script W00 Regular.ttf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 @theme {
   --font-wedding-body: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-wedding-script: "Burgues Script", cursive;
+  --text-wedding-hero: 72px;
+  --text-wedding-section-heading: 33px;
+  --text-wedding-body: 20px;
   --color-wedding-paper: #e7d3b5;
   --color-wedding-ink: #60443c;
   --color-wedding-label: #7d5450;
@@ -48,13 +61,20 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: "Pinyon Script", cursive;
+    font-family: var(--font-wedding-script);
+  }
+
+  h2 {
+    font-size: var(--text-wedding-section-heading);
+  }
+
+  p {
+    font-size: var(--text-wedding-body);
   }
 
   body {
@@ -63,6 +83,8 @@
     min-height: 100svh;
     margin: 0;
     overflow-x: hidden;
+    font-size: var(--text-wedding-body);
+    line-height: 1.5;
   }
 
   #root {

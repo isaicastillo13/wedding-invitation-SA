@@ -21,7 +21,7 @@ function InvitationHero({ visible }) {
       />
       <div className="absolute top-2/3 left-[clamp(24px,6vw,88px)] w-[min(52vw,630px)] -translate-y-1/2 max-[600px]:top-[66%] max-[600px]:left-5 max-[600px]:w-[62vw]">
         <h1
-          className="text-8xl m-0 flex flex-col items-start text-[clamp(3.2rem,8.6vw,8rem)] leading-[0.88] tracking-normal text-wedding-white [text-shadow:0_2px_18px_var(--color-wedding-hero-shadow)] max-[600px]:text-[clamp(2.4rem,10.5vw,4.2rem)]"
+          className="m-0 flex flex-col items-start font-wedding-script text-wedding-hero leading-[0.88] tracking-normal text-wedding-white [text-shadow:0_2px_18px_var(--color-wedding-hero-shadow)] max-[600px]:text-[clamp(2.6rem,12vw,4.5rem)]"
           id="couple-names"
         >
           <span>Arantxa</span>
@@ -29,7 +29,7 @@ function InvitationHero({ visible }) {
           <span>Samuel</span>
         </h1>
       </div>
-      <p className="absolute bottom-[clamp(38px,9vh,82px)] left-1/2 m-0 -translate-x-1/2 px-[1.15em] py-[0.55em] font-wedding-body text-[clamp(1.05rem,2.4vw,1.7rem)] leading-[1.35] text-wedding-white">
+      <p className="absolute bottom-[clamp(38px,9vh,82px)] left-1/2 m-0 -translate-x-1/2 px-[1.15em] py-[0.55em] font-wedding-body leading-[1.35] text-wedding-white">
         ¡Nos casamos!
       </p>
     </section>

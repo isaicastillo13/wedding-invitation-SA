@@ -73,17 +73,17 @@ function App() {
               id="wedding-invitation"
               aria-hidden={envelopeState !== 'open'}
             >
-              <p className="m-0 text-[clamp(0.48rem,1.5vw,0.68rem)] leading-[1.5] font-semibold tracking-[0.15em] text-wedding-label uppercase">
+              <p className="m-0 leading-[1.5] font-semibold tracking-[0.15em] text-wedding-label uppercase">
                 TEXTO DE EJEMPLO · REEMPLAZAR
               </p>
-              <p className="my-[0.2em] font-serif text-[clamp(1.22rem,5vw,2.65rem)] leading-[1.1] max-[480px]:text-[clamp(1.22rem,6vw,1.8rem)]">
+              <p className="my-[0.2em] font-serif leading-[1.1]">
                 Arantxa <span className="text-wedding-accent italic">&amp;</span>{' '}
                 Samuel
               </p>
-              <p className="mt-[0.22em] mb-0 font-serif text-[clamp(0.62rem,1.8vw,0.9rem)]">
+              <p className="mt-[0.22em] mb-0 font-serif">
                 Sábado, 00 de mes · 20XX
               </p>
-              <p className="mt-[0.22em] mb-0 font-serif text-[clamp(0.62rem,1.8vw,0.9rem)] italic">
+              <p className="mt-[0.22em] mb-0 font-serif italic">
                 Ciudad · lugar por confirmar
               </p>
             </div>
@@ -132,7 +132,7 @@ function App() {
             />
           </div>
 
-          <p className="mt-[clamp(14px,2.5vh,22px)] mb-0 min-h-[1.5em] font-serif text-[0.92rem] italic text-wedding-hint [text-shadow:0_1px_10px_var(--color-wedding-glow-strong)]">
+          <p className="mt-[clamp(14px,2.5vh,22px)] mb-0 min-h-[1.5em] font-serif italic text-wedding-hint [text-shadow:0_1px_10px_var(--color-wedding-glow-strong)]">
             {envelopeState === 'closed' ? 'Toca para abrir' : stateLabel}
           </p>
           <p className="sr-only" role="status" aria-live="polite">

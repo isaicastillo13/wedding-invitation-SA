@@ -1,5 +1,5 @@
 import hotelIllustration from "../assets/Img/hotel.png";
-import couplePhoto from "../assets/Img/IMG_5.JPG.jpeg";
+import couplePhoto from "../assets/Img/IMG_7.JPG.jpeg";
 import fondo from "../assets/Img/fondo_1.png";
 
 function PhotoSection1() {
@@ -28,13 +28,13 @@ function PhotoSection1() {
           aria-hidden="true"
         />
         <img
-          className="relative z-10 mx-auto h-full max-w-[42vw] scale-150 object-contain mix-blend-multiply top-12"
+          className="relative z-10 mx-auto h-full max-w-[42vw] object-contain mix-blend-multiply mt-[100px]"
           src={hotelIllustration}
           alt=""
           draggable="false"
         />
 
-        <div className="relative z-10 flex min-h-0 flex-col items-center justify-center px-4 text-center font-wedding-body text-[clamp(0.68rem,2vw,1.15rem)] leading-[1.45] tracking-[0.1em] uppercase font-bold">
+        <div className="relative z-10 flex min-h-0 flex-col items-center justify-center px-4 text-center font-wedding-body leading-[1.45] tracking-[0.1em] uppercase font-bold">
           <h2 className="sr-only" id="celebration-details-title">
             Detalles de la celebración
           </h2>

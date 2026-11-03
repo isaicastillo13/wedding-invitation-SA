@@ -1,4 +1,4 @@
-import backgroundImage from '../assets/Img/fondo_1.png'
+import backgroundImage from "../assets/Img/fondo_1.png";
 
 function Gifts() {
   return (
@@ -18,19 +18,21 @@ function Gifts() {
 
       <div className="relative z-10 flex w-full max-w-[1000px] translate-y-[5vh] flex-col items-center gap-8 text-center">
         <h2
-          className="m-0 text-[clamp(3rem,14vw,8rem)] leading-[0.85] font-normal text-wedding-separator-wine"
-          id="gift-title"
+          className="m-0 leading-[1.1] font-normal text-wedding-separator-wine"
+          id="dress-code-title"
         >
-          Muestra de cariño
+          Muestra de Cariño
         </h2>
-        <div className="font-wedding-body text-[clamp(1.65rem,5vw,3rem)] leading-[1.45]">
+        <div className="font-wedding-body leading-[1.45]">
           <p className="m-0">lluvia de sobres</p>
-          <p className="m-0">Yappy: 6676-6109</p>
-          <p className="mb-8">ACH:</p>
+          <p className="m-0">Yappy: <br />6676-6109</p>
+          <p className="mb-8">
+            ACH: <br /> Samuel y Arantxa <br />04-01-98-356275-3
+          </p>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Gifts
+export default Gifts;

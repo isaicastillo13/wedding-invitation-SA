@@ -18,7 +18,7 @@ function PhotoSection2() {
           <h2 className="sr-only" id="closing-verse">
             Cita bíblica
           </h2>
-          <blockquote className="mx-auto my-0 max-w-[58ch] font-wedding-body text-[clamp(1rem,2vw,1.25rem)] leading-[1.45]">
+          <blockquote className="mx-auto my-0 max-w-[58ch] font-wedding-body leading-[1.45]">
             <p className="m-0">
               Y ahora permanecen la fe, la esperanza y el amor, estos tres; pero
               el mayor de ellos es el amor.

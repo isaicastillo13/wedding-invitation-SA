@@ -17,7 +17,7 @@ function SeatsSection() {
 
       <div className="grid grid-rows-[auto_1fr_auto] justify-items-center bg-wedding-separator-wine px-5 py-[clamp(1.5rem,4vh,3rem)] text-wedding-white">
         <h2
-          className="m-0 font-wedding-body text-[clamp(2rem,4vw,3rem)] leading-tight font-medium"
+          className="m-0 leading-tight font-medium"
           id="seats-title"
         >
           Para ti
@@ -32,16 +32,16 @@ function SeatsSection() {
             aria-hidden="true"
           />
           <div className="relative flex flex-col items-center text-center">
-            <span className="font-[Pinyon_Script] text-[clamp(3.5rem,8vw,6rem)] leading-none">
+            <span className="font-wedding-script leading-none">
               1
             </span>
-            <p className="mt-2 mb-0 font-wedding-body text-[clamp(2rem,4vw,3rem)] leading-none">
+            <p className="mt-2 mb-0 font-wedding-body leading-none">
               Puesto
             </p>
           </div>
         </div>
 
-        <p className="m-0 max-w-[32ch] text-center font-wedding-body text-[clamp(1.1rem,2.4vw,1.65rem)] leading-[1.25]">
+        <p className="m-0 max-w-[32ch] text-center font-wedding-body leading-[1.25]">
           Fecha límite para confirmar asistencia
           <br />
           18 de noviembre 2026
